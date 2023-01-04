@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>HTML Template til React</title>
+  </head>
+  <body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const root = ReactDOM.createRoot(document.getElementById('root'))
+      
+      const Func1 = () => {
+      return <h2>jsx er godt for maven!</h2>
+    }
+
+    const Func2 = () => {
+      return 10*10
+    }
+
+    const Func3 = () => {
+      return (
+        <ol>
+          <li>food</li>
+          <li>more food</li>
+          <li>even more food</li>
+        </ol>
+      )
+    }
+
+    const Func4 = () => {
+      return (
+        <div>
+          <p>hellooo</p>
+          <p>hiii</p>
+        </div>
+      )
+    }
+
+    const Func5 = () => {
+      return (
+        <>
+         <Func4/>
+        </>
+      )
+    }
+    const Func6 = () => {
+      return (
+        <>
+        <input type="text"></input>
+        </>
+      )
+    }
+    const Func7 = () => {
+      return (
+        <section className="mainwrapper">section mainwrapper</section>
+      )
+    }
+    const Func8 = () => {
+      const x = 10
+      let text = 'good morning'
+      if (x > 12) {
+        text = 'good afternoon'
+      }
+      return <p>{text}</p>
+
+      }
+    const Func9 = () => {
+      const x = 10
+      let text = <p>{(x) < 12 ? 'good morning' : 'good afternoon'}</p>
+      return text
+    }
+
+    const Func10 = () => {
+      return (
+        <>
+        <Func1/>
+        <Func2/>
+        <Func3/>
+        <Func4/>
+        <Func5/>
+        <Func6/>
+        <Func7/>
+        <Func8/>
+        <Func9/>
+        </>
+      )
+    }
+
+    root.render(<Func10/>)
+    
+    </script>
+
+  </body>
+</html>
